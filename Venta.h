@@ -230,8 +230,8 @@ void Venta::mostrar() const {
     cout << endl;
 }
 void Venta::generar() {
-
-    //listarProductosOrdenados();
+    bool continuarConVenta = true;
+    listarProductosOrdenados(continuarConVenta);
 
     int idProducto, cantidad;
     cout << "REGISTRANDO UNA NUEVA VENTA\n\nIngrese ID del producto: ";

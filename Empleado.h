@@ -33,7 +33,7 @@ public:
     void levantar();
 };
 
-// =================== IMPLEMENTACIÓN ===================
+// =================== IMPLEMENTACIï¿½N ===================
 
 Empleado::Empleado() {
     id = 0;
@@ -71,7 +71,7 @@ bool existeIDEmpleado(int idBuscar) {
 void nuevoRegistroEmpleado() {
     ofstream file("empleados.dat", ios::app | ios::binary);
     if (!file) {
-        cout << "No se pudo abrir empleado.dat para escritura." << endl;
+        cout << "No se pudo abrir empleados.dat para escritura." << endl;
         system("pause");
         return;
     }
@@ -111,7 +111,7 @@ void Empleado::mostrar() const {
 void listarEmpleados() {
     ifstream file("empleados.dat", ios::binary);
     if (!file) {
-        cout << "No se pudo abrir empleado.dat" << endl;
+        cout << "No se pudo abrir empleados.dat" << endl;
         system("pause");
         return;
     }
