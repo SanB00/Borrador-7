@@ -23,7 +23,7 @@ int main() {
         cout << "4. Gestionar editoriales" << endl;
         cout << "5. Gestionar series" << endl;
         cout << "6. Gestionar empleados" << endl;
-        cout << "7. Compras" << endl;
+        
         cout << "8. Ventas" << endl;
         cout << "9. Informes "<< endl;
         cout << "0. Salir del programa" << endl;

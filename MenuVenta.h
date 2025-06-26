@@ -34,6 +34,12 @@ void mostrarVentasPorAnio(int anio) {
 
     file.close();
 }
+void generarNuevaVenta() {
+    Venta v;
+    v.generar();
+    v.guardarEnArchivo();
+    
+}
 
 void mostrarVentasPorMes(int anio, int mes) {
     Venta v;
@@ -60,6 +66,7 @@ void menuVenta() {
         cout << "1. Listar todas las ventas" << endl;
         cout << "2. Mostrar ventas por anio" << endl;
         cout << "3. Mostrar ventas por mes" << endl;
+        cout << "4. Generar nueva venta" << endl;
         cout << "0. Volver al menu anterior" << endl;
         cout << "Opcion: ";
         cin >> opc;
@@ -87,6 +94,10 @@ void menuVenta() {
                 system("pause");
                 break;
             }
+            case 4:
+                generarNuevaVenta();
+                system("pause");
+                break;
         }
     } while (opc != 0);
 }
