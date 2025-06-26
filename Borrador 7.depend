@@ -158,11 +158,13 @@
 	<cstring>
 	<iomanip>
 
-1750822332 c:\users\josee\downloads\borrador 7\menucompra.h
+1750908611 c:\users\josee\downloads\borrador 7\menucompra.h
 	<iostream>
 	"Compra.h"
 
-1750821534 c:\users\josee\downloads\borrador 7\compra.h
+1750909703 c:\users\josee\downloads\borrador 7\compra.h
+
+1750909479 c:\users\josee\downloads\borrador 7\venta.h
 	<iostream>
 	<fstream>
 	<cstdlib>
@@ -171,12 +173,7 @@
 	"Empleado.h"
 	"Venta.h"
 
-1750452672 c:\users\josee\downloads\borrador 7\venta.h
-	<iostream>
-	<fstream>
-	<cstring>
-
-1750454170 c:\users\josee\downloads\borrador 7\menuventa.h
+1750907916 c:\users\josee\downloads\borrador 7\menuventa.h
 	"Venta.h"
 
 1750535336 c:\users\josee\downloads\borrador 7\menuinformes.h
@@ -185,7 +182,7 @@
 1750535138 c:\users\josee\downloads\borrador 7\informeproducto.h
 	"Producto.h"
 
-1750808540 source:c:\users\josee\downloads\borrador 7\main.cpp
+1750909712 source:c:\users\josee\downloads\borrador 7\main.cpp
 	<iostream>
 	"MenuProducto.h"
 	"MenuGenero.h"
