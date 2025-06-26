@@ -1,0 +1,199 @@
+# depslib dependency file v1.0
+1750808538 source:c:\users\thomas\desktop\progra 2 segundo intento\borrador 7\mein.cpp
+	<iostream>
+	"MenuProducto.h"
+	"MenuGenero.h"
+	"MenuAutor.h"
+	"MenuEditorial.h"
+	"MenuSerie.h"
+	"MenuEmpleado.h"
+	"MenuCompra.h"
+	"MenuVenta.h"
+	"MenuInformes.h"
+
+1750815415 c:\users\thomas\desktop\progra 2 segundo intento\borrador 7\menuproducto.h
+	"Producto.h"
+
+1750809455 c:\users\thomas\desktop\progra 2 segundo intento\borrador 7\producto.h
+	<iostream>
+	<fstream>
+	<iomanip>
+	<cstring>
+
+1750808332 c:\users\thomas\desktop\progra 2 segundo intento\borrador 7\menugenero.h
+	"Genero.h"
+
+1750809248 c:\users\thomas\desktop\progra 2 segundo intento\borrador 7\genero.h
+	<iostream>
+	<fstream>
+	<cstring>
+	<iomanip>
+
+1750816702 c:\users\thomas\desktop\progra 2 segundo intento\borrador 7\menueditorial.h
+	"Editorial.h"
+
+1750770057 c:\users\thomas\desktop\progra 2 segundo intento\borrador 7\editorial.h
+	<iostream>
+	<fstream>
+	<iomanip>
+	<cstring>
+
+1750807820 c:\users\thomas\desktop\progra 2 segundo intento\borrador 7\menuautor.h
+	"Autor.h"
+
+1750807856 c:\users\thomas\desktop\progra 2 segundo intento\borrador 7\autor.h
+	<iostream>
+	<fstream>
+	<cstring>
+	<iomanip>
+
+1750821532 c:\users\thomas\desktop\progra 2 segundo intento\borrador 7\compra.h
+	<iostream>
+	<fstream>
+	<cstdlib>
+	<ctime>
+	"Producto.h"
+	"Empleado.h"
+	"Venta.h"
+
+1750800678 c:\users\thomas\desktop\progra 2 segundo intento\borrador 7\empleado.h
+	<iostream>
+	<fstream>
+	<cstring>
+	<iomanip>
+
+1750452671 c:\users\thomas\desktop\progra 2 segundo intento\borrador 7\venta.h
+	<iostream>
+	<fstream>
+	<cstring>
+
+1750816980 c:\users\thomas\desktop\progra 2 segundo intento\borrador 7\menuserie.h
+	"Serie.h"
+
+1750782390 c:\users\thomas\desktop\progra 2 segundo intento\borrador 7\serie.h
+	<iostream>
+	<fstream>
+	<cstring>
+	<iomanip>
+
+1750802756 c:\users\thomas\desktop\progra 2 segundo intento\borrador 7\menuempleado.h
+	"Empleado.h"
+
+1750822330 c:\users\thomas\desktop\progra 2 segundo intento\borrador 7\menucompra.h
+	<iostream>
+	"Compra.h"
+
+1750454168 c:\users\thomas\desktop\progra 2 segundo intento\borrador 7\menuventa.h
+	"Venta.h"
+
+1750535335 c:\users\thomas\desktop\progra 2 segundo intento\borrador 7\menuinformes.h
+	"InformeProducto.h"
+
+1750535136 c:\users\thomas\desktop\progra 2 segundo intento\borrador 7\informeproducto.h
+	"Producto.h"
+
+1750808540 source:c:\users\josee\downloads\borrador 7\mein.cpp
+	<iostream>
+	"MenuProducto.h"
+	"MenuGenero.h"
+	"MenuAutor.h"
+	"MenuEditorial.h"
+	"MenuSerie.h"
+	"MenuEmpleado.h"
+	"MenuCompra.h"
+	"MenuVenta.h"
+	"MenuInformes.h"
+
+1750815416 c:\users\josee\downloads\borrador 7\menuproducto.h
+	"Producto.h"
+
+1750809456 c:\users\josee\downloads\borrador 7\producto.h
+	<iostream>
+	<fstream>
+	<iomanip>
+	<cstring>
+
+1750808334 c:\users\josee\downloads\borrador 7\menugenero.h
+	"Genero.h"
+
+1750809250 c:\users\josee\downloads\borrador 7\genero.h
+	<iostream>
+	<fstream>
+	<cstring>
+	<iomanip>
+
+1750807822 c:\users\josee\downloads\borrador 7\menuautor.h
+	"Autor.h"
+
+1750807858 c:\users\josee\downloads\borrador 7\autor.h
+	<iostream>
+	<fstream>
+	<cstring>
+	<iomanip>
+
+1750816704 c:\users\josee\downloads\borrador 7\menueditorial.h
+	"Editorial.h"
+
+1750899241 c:\users\josee\downloads\borrador 7\editorial.h
+	<iostream>
+	<fstream>
+	<iomanip>
+	<cstring>
+
+1750816982 c:\users\josee\downloads\borrador 7\menuserie.h
+	"Serie.h"
+
+1750782392 c:\users\josee\downloads\borrador 7\serie.h
+	<iostream>
+	<fstream>
+	<cstring>
+	<iomanip>
+
+1750802758 c:\users\josee\downloads\borrador 7\menuempleado.h
+	"Empleado.h"
+
+1750800680 c:\users\josee\downloads\borrador 7\empleado.h
+	<iostream>
+	<fstream>
+	<cstring>
+	<iomanip>
+
+1750822332 c:\users\josee\downloads\borrador 7\menucompra.h
+	<iostream>
+	"Compra.h"
+
+1750821534 c:\users\josee\downloads\borrador 7\compra.h
+	<iostream>
+	<fstream>
+	<cstdlib>
+	<ctime>
+	"Producto.h"
+	"Empleado.h"
+	"Venta.h"
+
+1750452672 c:\users\josee\downloads\borrador 7\venta.h
+	<iostream>
+	<fstream>
+	<cstring>
+
+1750454170 c:\users\josee\downloads\borrador 7\menuventa.h
+	"Venta.h"
+
+1750535336 c:\users\josee\downloads\borrador 7\menuinformes.h
+	"InformeProducto.h"
+
+1750535138 c:\users\josee\downloads\borrador 7\informeproducto.h
+	"Producto.h"
+
+1750808540 source:c:\users\josee\downloads\borrador 7\main.cpp
+	<iostream>
+	"MenuProducto.h"
+	"MenuGenero.h"
+	"MenuAutor.h"
+	"MenuEditorial.h"
+	"MenuSerie.h"
+	"MenuEmpleado.h"
+	"MenuCompra.h"
+	"MenuVenta.h"
+	"MenuInformes.h"
+
