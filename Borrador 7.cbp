@@ -38,7 +38,7 @@
 		<Unit filename="Fecha.h" />
 		<Unit filename="Genero.h" />
 		<Unit filename="InformeProducto.h" />
-		<Unit filename="Mein.cpp" />
+		<Unit filename="Main.cpp" />
 		<Unit filename="MenuAutor.h" />
 		<Unit filename="MenuCompra.h" />
 		<Unit filename="MenuEditorial.h" />

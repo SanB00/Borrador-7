@@ -145,7 +145,23 @@ void Producto::mostrar() const {
          << setw(10) << (estado ? "Activo" : "Baja") << endl;
 }
 
-// Baja lógica
+
+bool existeRegistro(int idBuscar) {
+    Producto e;
+    ifstream file("productos.dat", ios::binary);
+    if (!file) return false;
+
+    while (file.read(reinterpret_cast<char*>(&e), sizeof(Producto))) {
+        if (e.getID() == idBuscar && e.getEstado()) {
+            file.close();
+            return true;
+        }
+    }
+
+    file.close();
+    return false;
+}
+// Baja lï¿½gica
 void Producto::bajaProducto() {
     fstream file("productos.dat", ios::in | ios::out | ios::binary);
     if (!file) {
@@ -178,7 +194,7 @@ void Producto::bajaProducto() {
     system("pause");
 }
 
-// Levantar lógica
+// Levantar lï¿½gica
 void Producto::levantarProducto() {
     fstream file("productos.dat", ios::in | ios::out | ios::binary);
     if (!file) {
@@ -342,7 +358,7 @@ void mostrarProductosTabla(Producto v[], int n) {
     cout << endl;
 }
 
-void listarProductosOrdenados() {
+void listarProductosOrdenados(bool continuarConVenta = false) {
     Producto v[MAX_PRODUCTOS];
     int n = cargarProductos(v, MAX_PRODUCTOS);
 
@@ -367,17 +383,29 @@ void listarProductosOrdenados() {
         system("cls");
 
         switch (opc) {
-            case 1: ordenarPorID(v, n); break;
-            case 2: ordenarPorTitulo(v, n); break;
-            case 3: ordenarPorPrecio(v, n); break;
-            case 4: ordenarPorStock(v, n); break;
-            case 5: ordenarPorTipo(v, n); break;
+            case 1: 
+                ordenarPorID(v, n); 
+            break;
+            case 2: 
+                ordenarPorTitulo(v, n); 
+            break;
+            case 3: 
+                ordenarPorPrecio(v, n); 
+            break;
+            case 4: 
+                ordenarPorStock(v, n); 
+            break;
+            case 5: 
+                ordenarPorTipo(v, n); 
+                
+            break;
             case 0: return;
             default: cout << "Opcion invalida." << endl; break;
         }
 
         if (opc != 0) {
             mostrarProductosTabla(v, n);
+            if (continuarConVenta) {return;}
             system("pause");
             system("cls");
         }

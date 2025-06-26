@@ -18,7 +18,7 @@ void menuCompra() {
 
         switch (opcion) {
             case 1:
-                compraManual();
+               // compraManual();
                 break;
             case 0:
                 break;

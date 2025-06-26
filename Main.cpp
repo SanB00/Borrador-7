@@ -23,9 +23,8 @@ int main() {
         cout << "4. Gestionar editoriales" << endl;
         cout << "5. Gestionar series" << endl;
         cout << "6. Gestionar empleados" << endl;
-        cout << "7. Compras" << endl;
-        cout << "8. Ventas" << endl;
-        cout << "9. Informes "<< endl;
+        cout << "7. Ventas" << endl;
+        cout << "8. Informes "<< endl;
         cout << "0. Salir del programa" << endl;
         cout << "Opcion: ";
         cin >> opc;
@@ -37,9 +36,8 @@ int main() {
             case 4: menuEditorial(); break;
             case 5: menuSerie(); break;
             case 6: menuEmpleado(); break;
-            case 7: menuCompra(); break;
-            case 8: menuVenta(); break;
-            case 9: menuInformes(); break;
+            case 7: menuVenta(); break;
+            case 8: menuInformes(); break;
         }
 
     } while (opc != 0);
