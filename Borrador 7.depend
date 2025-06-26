@@ -107,7 +107,7 @@
 1750815416 c:\users\josee\downloads\borrador 7\menuproducto.h
 	"Producto.h"
 
-1750911650 c:\users\josee\downloads\borrador 7\producto.h
+1750915517 c:\users\josee\downloads\borrador 7\producto.h
 	<iostream>
 	<fstream>
 	<iomanip>
@@ -152,7 +152,7 @@
 1750802758 c:\users\josee\downloads\borrador 7\menuempleado.h
 	"Empleado.h"
 
-1750911127 c:\users\josee\downloads\borrador 7\empleado.h
+1750915679 c:\users\josee\downloads\borrador 7\empleado.h
 	<iostream>
 	<fstream>
 	<cstring>
@@ -164,14 +164,14 @@
 
 1750909703 c:\users\josee\downloads\borrador 7\compra.h
 
-1750911462 c:\users\josee\downloads\borrador 7\venta.h
+1750915693 c:\users\josee\downloads\borrador 7\venta.h
 	<iostream>
 	<fstream>
 	<cstdlib>
 	<ctime>
 	"Producto.h"
 	"Empleado.h"
-	"Venta.h"
+	"Fecha.h"
 
 1750910660 c:\users\josee\downloads\borrador 7\menuventa.h
 	"Venta.h"
@@ -193,4 +193,7 @@
 	"MenuCompra.h"
 	"MenuVenta.h"
 	"MenuInformes.h"
+
+1750914590 c:\users\josee\downloads\borrador 7\fecha.h
+	"Fecha.h"
 

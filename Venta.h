@@ -8,12 +8,13 @@ using namespace std;
 
 #include "Producto.h"
 #include "Empleado.h"
-#include "Venta.h"
+#include "Fecha.h"
 class Venta {
 private:
     int idVenta;
     int idEmpleado;
     int dia, mes, anio;
+    Fecha fecha;
     float montoTotal;
     bool estado;
 
@@ -40,11 +41,16 @@ public:
     void mostrar() const;
     bool guardarEnArchivo() const;
     void generar();
+    Fecha getFechaClase();
 
 
 };
 
+Fecha Venta::getFechaClase(){
 
+    return fecha;
+
+}
 
 // --------------------- CONFIGURACION ---------------------
 const int STOCK_MINIMO = 5;
@@ -91,7 +97,7 @@ int obtenerIDEmpleadoAleatorio() {
     return ids[rand() % total];
 }
 
-bool descontarStock(int idProducto, int cantidad) {
+bool descontarStock(int idProducto, int cantidad, bool escribir=false) {
     fstream file("productos.dat", ios::in | ios::out | ios::binary);
     if (!file) return false;
 
@@ -102,7 +108,7 @@ bool descontarStock(int idProducto, int cantidad) {
             if (p.getStock() >= cantidad) {
                 p.setStock(p.getStock() - cantidad);
                 file.seekp(pos * sizeof(Producto), ios::beg);
-                file.write(reinterpret_cast<char*>(&p), sizeof(Producto));
+                if(escribir){file.write(reinterpret_cast<char*>(&p), sizeof(Producto));}
                 file.close();
                 return true;
             } else {
@@ -193,6 +199,7 @@ Venta::Venta() {
     dia = mes = anio = 0;
     montoTotal = 0;
     estado = true;
+   Fecha();
 }
 
 void Venta::setIDVenta(int id) { idVenta = id; }
@@ -202,6 +209,7 @@ void Venta::setFecha(int d, int m, int a) {
     mes = m;
     anio = a;
 }
+
 void Venta::setMontoTotal(float m) { montoTotal = m; }
 void Venta::setEstado(bool e) { estado = e; }
 
@@ -223,10 +231,10 @@ bool Venta::guardarEnArchivo() const {
 
 void Venta::mostrar() const {
     cout << "ID Venta: " << idVenta << endl;
-    cout << "ID Empleado: " << idEmpleado << endl;
-    cout << "Fecha: " << dia << "/" << mes << "/" << anio << endl;
-    cout << "Monto total: $" << montoTotal << endl;
-    cout << "Estado: " << (estado ? "Activa" : "Inactiva") << endl;
+    cout << "   ID Empleado: " << idEmpleado << endl;
+    cout << "   Fecha: " << dia << "/" << mes << "/" << anio << endl;
+    cout << "   Monto total: $" << montoTotal << endl;
+    cout << "   Estado: " << (estado ? "Activa" : "Inactiva") << endl;
     cout << endl;
 }
 void Venta::generar() {
@@ -241,7 +249,7 @@ void Venta::generar() {
 
 
     if (!descontarStock(idProducto, cantidad)) {
-        cout << "Stock insuficiente o producto no valido." << endl;
+        cout << "ERROR: Stock insuficiente o producto no valido." << endl;
         return;
     }
 
@@ -254,21 +262,31 @@ void Venta::generar() {
 
     float total = cantidad * p.getPrecioUnitario();
 
-    listarEmpleados();
-    int idEmp;
+        cout  << endl << endl;//"***SELECCIONAR EMPLEADO DEL LISTADO***"
+    listarEmpleados(continuarConVenta);
+    int idEmpleadoDeLaVenta;
     cout << "Ingrese ID del empleado que registra la venta: ";
-    cin >> idEmp;
+    cin >> idEmpleadoDeLaVenta;
 
+    // TODO validar que el empleado exista y este activo
+    bool existeEmpleado = existeIDEmpleado(idEmpleadoDeLaVenta);
+    if (!existeEmpleado) {
+        cout << "ERROR: El ID de empleado ingresado ("<<idEmpleadoDeLaVenta<<") no es valido." << endl;
+        return;
+    }
+
+    cout << "registrando venta con..." << endl;
     time_t t = time(0);
     tm* now = localtime(&t);
 
     Venta v;
     v.setIDVenta(generarIDVenta());
-    v.setIDEmpleado(idEmp);
+    v.setIDEmpleado(idEmpleadoDeLaVenta);
     v.setFecha(now->tm_mday, now->tm_mon + 1, now->tm_year + 1900);
     v.setMontoTotal(total);
     v.setEstado(true);
-
+    bool escribir=true;
+    descontarStock(idProducto, cantidad, escribir);
     if (v.guardarEnArchivo()) {
         cout << "Compra registrada correctamente." << endl;
         cout << "Monto: $" << total << endl;
@@ -276,15 +294,6 @@ void Venta::generar() {
         cout << "Error al guardar la venta." << endl;
     }
 }
-
-
-
-
-
-
-
-
-
 
 
 #endif

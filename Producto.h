@@ -145,6 +145,22 @@ void Producto::mostrar() const {
          << setw(10) << (estado ? "Activo" : "Baja") << endl;
 }
 
+
+bool existeRegistro(int idBuscar) {
+    Producto e;
+    ifstream file("productos.dat", ios::binary);
+    if (!file) return false;
+
+    while (file.read(reinterpret_cast<char*>(&e), sizeof(Producto))) {
+        if (e.getID() == idBuscar && e.getEstado()) {
+            file.close();
+            return true;
+        }
+    }
+
+    file.close();
+    return false;
+}
 // Baja l�gica
 void Producto::bajaProducto() {
     fstream file("productos.dat", ios::in | ios::out | ios::binary);
@@ -389,8 +405,8 @@ void listarProductosOrdenados(bool continuarConVenta = false) {
 
         if (opc != 0) {
             mostrarProductosTabla(v, n);
-            system("pause");
             if (continuarConVenta) {return;}
+            system("pause");
             system("cls");
         }
 

@@ -108,7 +108,7 @@ void Empleado::mostrar() const {
          << " | Estado: " << (estado ? "Activo" : "Baja") << endl;
 }
 
-void listarEmpleados() {
+void listarEmpleados(bool continuarConVenta=false) {
     ifstream file("empleados.dat", ios::binary);
     if (!file) {
         cout << "No se pudo abrir empleados.dat" << endl;
@@ -125,6 +125,7 @@ void listarEmpleados() {
     }
 
     file.close();
+    if(continuarConVenta){return;}
     system("pause");
 }
 
