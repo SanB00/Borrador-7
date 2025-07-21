@@ -7,9 +7,31 @@ using namespace std;
 #include "MenuEditorial.h"
 #include "MenuSerie.h"
 #include "MenuEmpleado.h"
-#include "MenuCompra.h"
 #include "MenuVenta.h"
 #include "MenuInformes.h"
+
+#include <string>
+#include <cctype>
+
+int checkInputIsNumber() {
+  std::string input;
+  std::string digits;
+  std::getline(std::cin, input);
+
+  for (char c : input) {
+    if (std::isdigit(static_cast<unsigned char>(c))) {
+      digits += c;
+    }
+  }
+
+  if (digits.empty() || digits != input) {
+    std::cout << "ERROR: ingrese solo numeros" << std::endl;
+    return -1;
+  }
+  int number = std::stoi(digits);
+  return number;
+
+}
 
 int main() {
     int opc;
@@ -27,7 +49,7 @@ int main() {
         cout << "8. Informes "<< endl;
         cout << "0. Salir del programa" << endl;
         cout << "Opcion: ";
-        cin >> opc;
+        opc = checkInputIsNumber();
 
         switch (opc) {
             case 1: menuProducto(); break;
