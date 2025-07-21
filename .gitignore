@@ -1,3 +1,5 @@
 bin/Debug
-obj/Debug
+obj/Debug/*
 .cursor
+bin/Debug/*
+*.dat

@@ -118,7 +118,7 @@ void Producto::nuevoRegistro() {
 
     do {
       cout << "Ingrese Precio Unitario (>0): ";
-      precioUnitario = Utils::checkInputIsNumber();
+      precioUnitario = Utils::checkInputIsFloat();
     } while(precioUnitario<=0);
 
     do {
