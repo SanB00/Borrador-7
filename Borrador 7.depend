@@ -197,7 +197,7 @@
 1750914590 c:\users\josee\downloads\borrador 7\fecha.h
 	"Fecha.h"
 
-1753076001 source:c:\users\josee\downloads\utn\borrador 7\main.cpp
+1753077579 source:c:\users\josee\downloads\utn\borrador 7\main.cpp
 	<iostream>
 	"Utils.h"
 	"MenuProducto.h"
@@ -214,7 +214,7 @@
 1750815416 c:\users\josee\downloads\utn\borrador 7\menuproducto.h
 	"Producto.h"
 
-1753076357 c:\users\josee\downloads\utn\borrador 7\producto.h
+1753078882 c:\users\josee\downloads\utn\borrador 7\producto.h
 	<iostream>
 	<fstream>
 	<iomanip>
@@ -259,7 +259,7 @@
 1750802758 c:\users\josee\downloads\utn\borrador 7\menuempleado.h
 	"Empleado.h"
 
-1750915679 c:\users\josee\downloads\utn\borrador 7\empleado.h
+1753077579 c:\users\josee\downloads\utn\borrador 7\empleado.h
 	<iostream>
 	<fstream>
 	<cstring>
@@ -271,10 +271,10 @@
 
 1750909703 c:\users\josee\downloads\utn\borrador 7\compra.h
 
-1750910660 c:\users\josee\downloads\utn\borrador 7\menuventa.h
+1753077579 c:\users\josee\downloads\utn\borrador 7\menuventa.h
 	"Venta.h"
 
-1750915693 c:\users\josee\downloads\utn\borrador 7\venta.h
+1753077579 c:\users\josee\downloads\utn\borrador 7\venta.h
 	<iostream>
 	<fstream>
 	<cstdlib>
@@ -283,7 +283,7 @@
 	"Empleado.h"
 	"Fecha.h"
 
-1750914590 c:\users\josee\downloads\utn\borrador 7\fecha.h
+1753077579 c:\users\josee\downloads\utn\borrador 7\fecha.h
 	"Fecha.h"
 
 1750535336 c:\users\josee\downloads\utn\borrador 7\menuinformes.h
@@ -292,11 +292,11 @@
 1750535138 c:\users\josee\downloads\utn\borrador 7\informeproducto.h
 	"Producto.h"
 
-1753075875 c:\users\josee\downloads\utn\borrador 7\utils.h
+1753078877 c:\users\josee\downloads\utn\borrador 7\utils.h
 
-1753075973 source:c:\users\josee\downloads\utn\borrador 7\utils.cpp
+1753078847 source:c:\users\josee\downloads\utn\borrador 7\utils.cpp
 	"Utils.h"
+	<cctype>
 	<iostream>
 	<string>
-	<cctype>
 

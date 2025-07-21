@@ -51,6 +51,7 @@
 		<Unit filename="Persona.h" />
 		<Unit filename="Producto.h" />
 		<Unit filename="Serie.h" />
+		<Unit filename="Utils.cpp" />
 		<Unit filename="Venta.h" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
