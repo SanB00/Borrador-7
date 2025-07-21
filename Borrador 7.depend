@@ -197,22 +197,24 @@
 1750914590 c:\users\josee\downloads\borrador 7\fecha.h
 	"Fecha.h"
 
-1750910507 source:c:\users\josee\downloads\utn\borrador 7\main.cpp
+1753076001 source:c:\users\josee\downloads\utn\borrador 7\main.cpp
 	<iostream>
+	"Utils.h"
 	"MenuProducto.h"
 	"MenuGenero.h"
 	"MenuAutor.h"
 	"MenuEditorial.h"
 	"MenuSerie.h"
 	"MenuEmpleado.h"
-	"MenuCompra.h"
 	"MenuVenta.h"
 	"MenuInformes.h"
+	<string>
+	<cctype>
 
 1750815416 c:\users\josee\downloads\utn\borrador 7\menuproducto.h
 	"Producto.h"
 
-1750915517 c:\users\josee\downloads\utn\borrador 7\producto.h
+1753076357 c:\users\josee\downloads\utn\borrador 7\producto.h
 	<iostream>
 	<fstream>
 	<iomanip>
@@ -289,4 +291,12 @@
 
 1750535138 c:\users\josee\downloads\utn\borrador 7\informeproducto.h
 	"Producto.h"
+
+1753075875 c:\users\josee\downloads\utn\borrador 7\utils.h
+
+1753075973 source:c:\users\josee\downloads\utn\borrador 7\utils.cpp
+	"Utils.h"
+	<iostream>
+	<string>
+	<cctype>
 

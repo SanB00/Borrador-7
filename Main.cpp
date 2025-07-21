@@ -1,15 +1,18 @@
 #include <iostream>
 using namespace std;
-
+#include "Utils.h"
 #include "MenuProducto.h"
 #include "MenuGenero.h"
 #include "MenuAutor.h"
 #include "MenuEditorial.h"
 #include "MenuSerie.h"
 #include "MenuEmpleado.h"
-#include "MenuCompra.h"
 #include "MenuVenta.h"
 #include "MenuInformes.h"
+
+#include <string>
+#include <cctype>
+
 
 int main() {
     int opc;
@@ -27,7 +30,7 @@ int main() {
         cout << "8. Informes "<< endl;
         cout << "0. Salir del programa" << endl;
         cout << "Opcion: ";
-        cin >> opc;
+        opc = Utils::checkInputIsNumber();
 
         switch (opc) {
             case 1: menuProducto(); break;
