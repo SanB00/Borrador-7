@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-
+#include "Utils.h"
 #include "MenuProducto.h"
 #include "MenuGenero.h"
 #include "MenuAutor.h"
@@ -13,25 +13,6 @@ using namespace std;
 #include <string>
 #include <cctype>
 
-int checkInputIsNumber() {
-  std::string input;
-  std::string digits;
-  std::getline(std::cin, input);
-
-  for (char c : input) {
-    if (std::isdigit(static_cast<unsigned char>(c))) {
-      digits += c;
-    }
-  }
-
-  if (digits.empty() || digits != input) {
-    std::cout << "ERROR: ingrese solo numeros" << std::endl;
-    return -1;
-  }
-  int number = std::stoi(digits);
-  return number;
-
-}
 
 int main() {
     int opc;
@@ -49,7 +30,7 @@ int main() {
         cout << "8. Informes "<< endl;
         cout << "0. Salir del programa" << endl;
         cout << "Opcion: ";
-        opc = checkInputIsNumber();
+        opc = Utils::checkInputIsNumber();
 
         switch (opc) {
             case 1: menuProducto(); break;

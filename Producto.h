@@ -116,11 +116,15 @@ void Producto::nuevoRegistro() {
     cout << "Ingrese Titulo: ";
     cin.getline(titulo, 50);
 
-    cout << "Ingrese Precio Unitario: ";
-    cin >> precioUnitario;
+    do {
+      cout << "Ingrese Precio Unitario (>0): ";
+      precioUnitario = Utils::checkInputIsNumber();
+    } while(precioUnitario<=0);
 
-    cout << "Ingrese Stock: ";
-    cin >> stock;
+    do {
+      cout << "Ingrese Stock (>=0): ";
+      stock = Utils::checkInputIsNumber();
+    } while(stock<0);
 
     int t;
     cout << "Tipo (1: Comic / 0: Manga): ";
@@ -383,21 +387,21 @@ void listarProductosOrdenados(bool continuarConVenta = false) {
         system("cls");
 
         switch (opc) {
-            case 1: 
-                ordenarPorID(v, n); 
+            case 1:
+                ordenarPorID(v, n);
             break;
-            case 2: 
-                ordenarPorTitulo(v, n); 
+            case 2:
+                ordenarPorTitulo(v, n);
             break;
-            case 3: 
-                ordenarPorPrecio(v, n); 
+            case 3:
+                ordenarPorPrecio(v, n);
             break;
-            case 4: 
-                ordenarPorStock(v, n); 
+            case 4:
+                ordenarPorStock(v, n);
             break;
-            case 5: 
-                ordenarPorTipo(v, n); 
-                
+            case 5:
+                ordenarPorTipo(v, n);
+
             break;
             case 0: return;
             default: cout << "Opcion invalida." << endl; break;
